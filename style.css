@@ -1,0 +1,136 @@
+/* Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: linear-gradient(135deg, #8e9eab, #eef2f3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222;
+  padding: 20px;
+}
+
+/* Main layout */
+.main-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Glassy panels */
+.left-panel, .right-panel {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Left: Game board */
+.left-panel {
+  flex: 1.2;
+  min-width: 300px;
+  text-align: center;
+}
+
+.left-panel h1 {
+  font-size: 32px;
+  color: #ffffffee;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+}
+
+#winner-text {
+  font-size: 18px;
+  color: #ffffffdd;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+/* Grid styling */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-content: center;
+}
+
+.box {
+  width: 90px;
+  height: 90px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 16px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2),
+              0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s;
+}
+
+.box:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.06);
+}
+
+/* Right: Score & Buttons */
+.right-panel {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+}
+
+.scoreboard h2 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.scoreboard p {
+  font-size: 16px;
+  margin: 6px 0;
+  color: #ffffffcc;
+}
+
+/* Buttons */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.controls button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  color: #222;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.controls button:hover {
+  background: linear-gradient(135deg, #9face6, #74ebd5);
+  transform: scale(1.05);
+}
+    
